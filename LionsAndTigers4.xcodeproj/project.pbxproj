@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91A354D1A69AFD200D09B63 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F91A354C1A69AFD200D09B63 /* CustomCollectionViewCell.m */; };
 		F9C036D01A686D0D0091FBD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036CF1A686D0D0091FBD7 /* main.m */; };
 		F9C036D31A686D0D0091FBD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036D21A686D0D0091FBD7 /* AppDelegate.m */; };
-		F9C036D61A686D0D0091FBD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036D51A686D0D0091FBD7 /* ViewController.m */; };
+		F9C036D61A686D0D0091FBD7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036D51A686D0D0091FBD7 /* RootViewController.m */; };
 		F9C036D91A686D0D0091FBD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C036D71A686D0D0091FBD7 /* Main.storyboard */; };
 		F9C036DB1A686D0D0091FBD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C036DA1A686D0D0091FBD7 /* Images.xcassets */; };
 		F9C036DE1A686D0D0091FBD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C036DC1A686D0D0091FBD7 /* LaunchScreen.xib */; };
 		F9C036EA1A686D0D0091FBD7 /* LionsAndTigers4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036E91A686D0D0091FBD7 /* LionsAndTigers4Tests.m */; };
+		F9C036F51A686E220091FBD7 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036F41A686E220091FBD7 /* TopViewController.m */; };
+		F9C036F81A686E350091FBD7 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C036F71A686E350091FBD7 /* HUDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F91A354B1A69AFD200D09B63 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		F91A354C1A69AFD200D09B63 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		F9C036CA1A686D0D0091FBD7 /* LionsAndTigers4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionsAndTigers4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C036CE1A686D0D0091FBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C036CF1A686D0D0091FBD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9C036D11A686D0D0091FBD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9C036D21A686D0D0091FBD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F9C036D41A686D0D0091FBD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F9C036D51A686D0D0091FBD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9C036D41A686D0D0091FBD7 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F9C036D51A686D0D0091FBD7 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		F9C036D81A686D0D0091FBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9C036DA1A686D0D0091FBD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9C036DD1A686D0D0091FBD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F9C036E31A686D0D0091FBD7 /* LionsAndTigers4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionsAndTigers4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C036E81A686D0D0091FBD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C036E91A686D0D0091FBD7 /* LionsAndTigers4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionsAndTigers4Tests.m; sourceTree = "<group>"; };
+		F9C036F31A686E220091FBD7 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		F9C036F41A686E220091FBD7 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		F9C036F61A686E350091FBD7 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		F9C036F71A686E350091FBD7 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +92,15 @@
 			children = (
 				F9C036D11A686D0D0091FBD7 /* AppDelegate.h */,
 				F9C036D21A686D0D0091FBD7 /* AppDelegate.m */,
-				F9C036D41A686D0D0091FBD7 /* ViewController.h */,
-				F9C036D51A686D0D0091FBD7 /* ViewController.m */,
+				F9C036D41A686D0D0091FBD7 /* RootViewController.h */,
+				F9C036D51A686D0D0091FBD7 /* RootViewController.m */,
 				F9C036D71A686D0D0091FBD7 /* Main.storyboard */,
+				F91A354B1A69AFD200D09B63 /* CustomCollectionViewCell.h */,
+				F91A354C1A69AFD200D09B63 /* CustomCollectionViewCell.m */,
+				F9C036F31A686E220091FBD7 /* TopViewController.h */,
+				F9C036F41A686E220091FBD7 /* TopViewController.m */,
+				F9C036F61A686E350091FBD7 /* HUDViewController.h */,
+				F9C036F71A686E350091FBD7 /* HUDViewController.m */,
 				F9C036DA1A686D0D0091FBD7 /* Images.xcassets */,
 				F9C036DC1A686D0D0091FBD7 /* LaunchScreen.xib */,
 				F9C036CD1A686D0D0091FBD7 /* Supporting Files */,
@@ -219,7 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9C036D61A686D0D0091FBD7 /* ViewController.m in Sources */,
+				F9C036F81A686E350091FBD7 /* HUDViewController.m in Sources */,
+				F9C036F51A686E220091FBD7 /* TopViewController.m in Sources */,
+				F9C036D61A686D0D0091FBD7 /* RootViewController.m in Sources */,
+				F91A354D1A69AFD200D09B63 /* CustomCollectionViewCell.m in Sources */,
 				F9C036D31A686D0D0091FBD7 /* AppDelegate.m in Sources */,
 				F9C036D01A686D0D0091FBD7 /* main.m in Sources */,
 			);
@@ -412,6 +430,7 @@
 				F9C036EF1A686D0D0091FBD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9C036F01A686D0D0091FBD7 /* Build configuration list for PBXNativeTarget "LionsAndTigers4Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +439,7 @@
 				F9C036F21A686D0D0091FBD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
