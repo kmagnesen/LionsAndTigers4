@@ -14,6 +14,7 @@
 @interface RootViewController () <TopDelegate>
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *leftPin;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *rightPin;
 
 @end
 
@@ -33,10 +34,14 @@
         }];
             } else {
         [UIView animateWithDuration:1.0f animations:^{
-                self.leftPin.constant = -16;
+            self.leftPin.constant = -16;
             [[self.view superview] layoutIfNeeded];
         }];
             }
+
+//    if (self.rightPin.constant == 16) {
+//        self.rightPin.constant ==
+//    }
 }
 
 
