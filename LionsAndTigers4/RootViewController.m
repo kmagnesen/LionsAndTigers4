@@ -8,11 +8,11 @@
 
 #import "RootViewController.h"
 #import "TopViewController.h"
-//#import "HUDViewController.h"
+#import "CustomCollectionViewCell.h"
+#import "HUDViewController.h"
 
 @interface RootViewController () <TopDelegate>
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *leftPin;
-
 
 
 @end
@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 
 }
 
