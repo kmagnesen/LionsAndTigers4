@@ -12,14 +12,13 @@
 
 @protocol HUDDelegate
 
+- (void) lionsButtonTapped;
+- (void) tigersButtonTapped;
+
 @end
 
 @interface HUDViewController : UIViewController
 
-- (void) tigersButtonTapped;
-
-- (void) lionsButtonTapped;
-
-@property id <HUDDelegate> delegate;
+@property (nonatomic,weak) id <HUDDelegate> delegate;
 
 @end

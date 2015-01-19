@@ -6,17 +6,16 @@
 //  Copyright (c) 2015 MobileMakers. All rights reserved.
 //
 
-#import "RootViewController.h"
 #import "TopViewController.h"
 #import "CustomCollectionViewCell.h"
+#import "HUDViewController.h"
 
-@interface TopViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface TopViewController () <UICollectionViewDelegate, UICollectionViewDataSource, HUDDelegate>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
-
+@property (nonatomic,weak) HUDViewController *myHUDViewDelegate;
 @property NSMutableArray *tigers;
 @property NSMutableArray *lions;
-@property NSMutableArray *currentImagesArray;
+
 
 @end
 
@@ -25,29 +24,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.tigers = [NSMutableArray new];
-    [self.tigers addObject:[UIImage imageNamed:@"tiger_1"]];
-    [self.tigers addObject:[UIImage imageNamed:@"tiger_2"]];
-    [self.tigers addObject:[UIImage imageNamed:@"tiger_3"]];
+    self.tigers = [[NSMutableArray alloc]initWithObjects:
+                   [UIImage imageNamed:@"tiger_1"],
+                   [UIImage imageNamed:@"tiger_2"],
+                   [UIImage imageNamed:@"tiger_3"],
+                   [UIImage imageNamed:@"tiger_4"],
+                   [UIImage imageNamed:@"tiger_5"],
+                   [UIImage imageNamed:@"tiger_6"],
+                   nil];
 
-    self.lions = [NSMutableArray new];
-    [self.lions addObject:[UIImage imageNamed:@"lion_1"]];
-    [self.lions addObject:[UIImage imageNamed:@"lion_2"]];
-    [self.lions addObject:[UIImage imageNamed:@"lion_3"]];
 
 
-    self.currentImagesArray = self.tigers;
-    
+    self.lions = [[NSMutableArray alloc]initWithObjects:
+                  [UIImage imageNamed:@"lion_1"],
+                  [UIImage imageNamed:@"lion_2"],
+                  [UIImage imageNamed:@"lion_3"],
+                  [UIImage imageNamed:@"lion_4"],
+                  [UIImage imageNamed:@"lion_5"],
+                  [UIImage imageNamed:@"lion_6"],
+                  nil];
 
-}
 
-- (IBAction)onBarButtonItemTapped:(UIBarButtonItem *)sender {
-    [self topRevealButtonTapped];
-    [self.delegate topRevealButtonTapped];
-}
+    self.currentImagesArray = [[NSMutableArray alloc]initWithArray:self.lions];
 
-- (void) topRevealButtonTapped {
-
+    NSLog(@"%lu", (unsigned long)self.lions.count);
 }
 
 #pragma mark UICollectionViewDataSource
@@ -58,9 +58,32 @@
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+
     cell.imageView.image = [self.currentImagesArray objectAtIndex:indexPath.row];
 
     return cell;
+}
+
+- (IBAction)onBarButtonItemTapped:(UIBarButtonItem *)sender {
+    [self.delegate topRevealButtonTapped];
+    NSLog(@"%@", self.delegate);
+}
+
+- (void)lionsButtonTapped
+{
+    [self.currentImagesArray removeAllObjects];
+    [self.currentImagesArray addObjectsFromArray:self.lions];
+    [self.imageCollectionView reloadData];
+    [self.delegate topRevealButtonTapped];
+}
+
+
+- (void)tigersButtonTapped
+{
+    [self.currentImagesArray removeAllObjects];
+    [self.currentImagesArray addObjectsFromArray:self.tigers];
+    [self.imageCollectionView reloadData];
+    [self.delegate topRevealButtonTapped];
 }
 
 @end

@@ -17,5 +17,7 @@
 @interface TopViewController : UIViewController
 
 @property id <TopDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UICollectionView *imageCollectionView;
+@property NSMutableArray *currentImagesArray;
 
 @end
