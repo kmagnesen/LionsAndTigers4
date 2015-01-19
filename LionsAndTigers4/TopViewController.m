@@ -33,8 +33,6 @@
                    [UIImage imageNamed:@"tiger_6"],
                    nil];
 
-
-
     self.lions = [[NSMutableArray alloc]initWithObjects:
                   [UIImage imageNamed:@"lion_1"],
                   [UIImage imageNamed:@"lion_2"],
@@ -44,11 +42,9 @@
                   [UIImage imageNamed:@"lion_6"],
                   nil];
 
-
     self.currentImagesArray = [[NSMutableArray alloc]initWithArray:self.lions];
-
-    NSLog(@"%lu", (unsigned long)self.lions.count);
 }
+
 
 #pragma mark UICollectionViewDataSource
 
@@ -58,15 +54,15 @@
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-
     cell.imageView.image = [self.currentImagesArray objectAtIndex:indexPath.row];
 
     return cell;
 }
 
+#pragma mark OnButtonsTapped
+
 - (IBAction)onBarButtonItemTapped:(UIBarButtonItem *)sender {
     [self.delegate topRevealButtonTapped];
-    NSLog(@"%@", self.delegate);
 }
 
 - (void)lionsButtonTapped

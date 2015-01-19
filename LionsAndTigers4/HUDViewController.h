@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class HUDViewController;
-
-@protocol HUDDelegate
+@protocol HUDDelegate <NSObject>
 
 - (void) lionsButtonTapped;
 - (void) tigersButtonTapped;
@@ -19,6 +17,6 @@
 
 @interface HUDViewController : UIViewController
 
-@property (nonatomic,weak) id <HUDDelegate> delegate;
+@property id<HUDDelegate> delegate;
 
 @end

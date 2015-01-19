@@ -16,8 +16,8 @@
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *rightPin;
 
-@property (nonatomic, weak) TopViewController *topVC;
-@property (nonatomic,weak) HUDViewController *hudVC;
+@property TopViewController *topVC;
+@property HUDViewController *hudVC;
 
 
 @end
@@ -34,13 +34,13 @@
     if (self.leftPin.constant == -16) {
         [UIView animateWithDuration:1.0f animations:^{
             self.leftPin.constant = 95;
-            self.rightPin.constant = -16;
+            self.rightPin.constant = -101;
             [[self.view superview] layoutIfNeeded];
-            NSLog(@"Hi");
         }];
             } else {
         [UIView animateWithDuration:1.0f animations:^{
             self.leftPin.constant = -16;
+            self.rightPin.constant = -16;
             [[self.view superview] layoutIfNeeded];
         }];
             }
@@ -49,12 +49,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    if ([segue.identifier  isEqual: @"TopSegue"]) {
+    if ([segue.identifier  isEqualToString: @"TopSegue"]) {
         UINavigationController *navVC = segue.destinationViewController;
         self.topVC = [navVC.viewControllers objectAtIndex:0];
         self.topVC.delegate = self;
     }
       else if ([segue.identifier isEqualToString:@"HUDSegue"]){
+          
           self.hudVC = segue.destinationViewController;
     }
 }
